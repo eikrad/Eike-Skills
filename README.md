@@ -35,7 +35,7 @@ When your thinking stabilizes, it offers to close and produces a **Design Brief*
 
 ### cv-coverletter-evaluator
 
-Three lenses, run independently so they don't blur into each other: a **hiring manager** reading for signal, a **Danish job-market expert** reading for local convention, and a **language reviewer** reading for AI tells. On top come cross-cutting checks for ATS compatibility, CV ↔ cover letter consistency, and unquantified claims.
+Three weighted lenses, run independently so they don't blur into each other: a **hiring manager** reading for whether a human at this company understands it (40 %), a **Danish job-market expert** reading for local convention (35 %), and a **language reviewer** reading for AI tells (15 %). On top come cross-cutting checks for CV ↔ cover letter consistency and unquantified claims. ATS is only a parsing gate, run last — never an optimization target: a change that only helps a parser is Polish at most, and one that makes the document worse for a human reader is never recommended.
 
 The output is a full Markdown report — executive summary, success-potential rating, pros and cons, per-perspective findings, recommendations tiered Critical / Important / Polish, and a set of open questions to surface what you haven't thought to put on the page. Feedback is quoted and specific, because "add more numbers" cannot be acted on and "bullet 3 in role 2 has no number" can.
 

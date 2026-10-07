@@ -96,7 +96,7 @@ Or CEFR (A1–C2) for languages. Be honest — Danes will probe.
 Danish hiring managers expect the cover letter to answer:
 1. **Why this role?** What drew you to it specifically?
 2. **Why this employer?** What do you know/like about them?
-3. **Why are you a fit?** Concrete pivot from your experience to their needs.
+3. **Why are you a fit?** Concrete pivot from your experience to their needs (their task first, then a short proof — not a CV replay).
 4. **What kind of colleague are you?** The personlighed paragraph.
 
 A cover letter missing any of these feels lazy. Especially #2 — generic "I'm interested in your company" applications get dropped.
