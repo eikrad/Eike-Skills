@@ -1,118 +1,83 @@
-# Danish Job Market — Reference
+# Danish job market — Perspective B
 
-This is a deeper reference for Perspective B and the cultural-fit check. Skim it; consult specific sections as needed.
+Judge the application as a Danish recruiter or leader would. Work through every section below; each one yields a finding or an explicit pass.
 
-## Length and structure
+## How Danish applications are read
 
-- **CV:** 1–2 pages is the strong norm. 3+ pages reads as inability to edit. Recent graduates often fit on 1 page; senior candidates can use 2.
-- **Cover letter ("ansøgning"):** typically 1 page, ~3–5 paragraphs. ~250–400 words. Longer feels indulgent.
+The *ansøgning* is read by a person, usually early and carefully, often before the CV. Many employers, especially SMEs and the public sector, run light recruitment systems (HR-ON, Emply/Talentech) or plain email; aggressive US-style keyword filtering is the exception. In this market human readability always outranks parser coverage.
 
-Standard CV section order (most common):
-1. Contact info (name, photo, phone, email, address or city, LinkedIn)
-2. Profile / "kort om mig" — 2–4 sentence summary
-3. Erfaring (Experience) — reverse chronological
-4. Uddannelse (Education) — reverse chronological
-5. Kompetencer / Færdigheder (Skills)
-6. Sprog (Languages) — with proficiency level
-7. IT-kundskaber (IT skills) — if relevant
-8. Frivilligt arbejde (Volunteer) — optional
-9. Fritidsinteresser (Hobbies) — short, concrete, real interests
-10. Referencer (References) — "kan oplyses ved henvendelse" / "available upon request" is fine
+## Language fit (highest-signal section)
 
-## Personal info expectations
+- **Danish posting → Danish application** (CV and letter). An English application to a Danish posting is **Critical**.
+- **English posting at a Danish company → English application.** A Danish line belongs only where it reflects real proficiency.
+- **Mixed signals** (English internally, Danish posting): Danish application, CV and letter fully in Danish.
+- **Danish below fluent:** state the level factually and concretely ("Dansk på B1, i gang med Modul 4"). An honest level reads better than silence or inflation.
+- **Right to work:** non-EU candidates add one short factual line; EU/EEA candidates leave it out.
 
-Unlike the US, in Denmark it's still common (and expected by some employers) to include:
-- A photo (professional, head-and-shoulders)
-- Date of birth (or just age)
-- Nationality / residency status (relevant given EU/non-EU rules)
-- Marital status / children — optional, used to be common, now mixed; safer to omit unless you want to signal stability for a family-friendly role
+## The ansøgning
 
-GDPR has not eliminated these; it simply means employers can't *require* them. Most Danish CVs still include photo + DOB.
+**Length:** one page, roughly 2,500–3,000 characters. Flag bloat hard.
 
-## Tone and self-promotion
+**Shape:** hook / why *this* company → **fagligt** (what you can do *here*, with evidence) → **personligt** (who you are as a colleague) → close with availability and an invitation to talk.
 
-The Janteloven cultural undercurrent (don't think you're better than others) shapes how candidates present themselves. The sweet spot is **quietly confident**:
-- Concrete achievements with numbers > superlatives.
-- "I led the migration of 40K customer records to the new CRM" > "I'm a passionate, results-driven leader who delivers at the highest level".
-- Avoid: "world-class", "rockstar", "ninja", "guru", "passionate game-changer", "best-in-class".
-- Acceptable confidence markers: "I'm strong at...", "My responsibility was...", "I delivered..." — direct, not boastful.
+**Why us, why now:** the letter answers all four — why this role, why this employer, why you fit (their task first, then a short proof), what kind of colleague you are. A generic "I'm interested in your company" fails the second and gets dropped.
 
-## Salutation and sign-off
+**Fagligt is transfer.** It opens on the employer's task. Flag an offer section that opens on a past employer or project name, narrates stack/tests/repo, or runs mostly in past tense — quote it. One or two proof clauses carry the argument; the CV holds the catalog. A deep project write-up in the letter is a catalog dump, not "specific evidence".
+
+**Personligt** is expected and read seriously: 3–5 sentences on collaboration style and work approach. Flag it when missing or generic ("I am a team player who loves challenges"). What lands:
+
+- Concrete behaviour over adjectives ("I'm the one who pushes for clarity in standups" beats "I'm a strong communicator").
+- Honesty about working style ("I think best when I have time to dig in alone before sharing").
+- Light humour or self-awareness; heavy quirkiness lands badly.
+
+**Salutation and sign-off:**
 
 | Situation | Salutation |
-|-----------|-----------|
+|---|---|
 | Named recipient | Kære [Fornavn Efternavn] / Kære [Fornavn] |
-| Unknown but role known | Kære rekrutteringsansvarlig / Kære [HR/personalechef] |
-| Fully unknown | Til rette vedkommende |
+| Recipient unknown | Kære rekrutteringsansvarlig |
 | English-language application | Dear [Name] / Dear Hiring Manager |
 
-Sign-offs: **Med venlig hilsen** (formal), **Bedste hilsner** (slightly warmer), **Venlig hilsen** (acceptable). End with full name, optionally followed by phone and email if not already in header.
+Sign off with **Med venlig hilsen** (Bedste hilsner and Venlig hilsen are acceptable). Danish workplaces run on first names and du-form; German-style formality and title stacking read as off.
 
-## The "personlighed" paragraph
+**Closing:** start date or notice period ("Jeg kan tiltræde den 1. [måned]", or the opsigelsesvarsel) plus a call to action ("Jeg står gerne til rådighed for en uddybende samtale").
 
-Many Danish cover letters include a brief paragraph (3–5 sentences) describing the candidate as a person — collaboration style, work approach, what colleagues would say. This is more expected in DK than in many other markets.
+**Contact person:** Danish postings almost always name one and invite a call. If the candidate has not called, note it as a concrete opportunity; if they have, the letter references the call.
 
-Good signals to land:
-- Concrete behavior, not adjectives ("I'm the one who pushes for clarity in standups" > "I'm a strong communicator").
-- Honesty about working style ("I think best when I have time to dig in alone before sharing" — acceptable, even valued).
-- Light humor or self-awareness lands well; heavy quirkiness lands badly.
+## The CV
 
-## See the Person
+**Length:** 1–2 pages; 3+ reads as inability to edit. Recent graduates often fit on one page.
 
-The CV should not just be a writedown of facts, but should show the Person behind the facts.
+**Section order:** contact info → kort profil (3–5 lines) → erfaring (reverse chronological) → uddannelse (reverse chronological) → kompetencer → sprog (with levels) → IT → frivilligt arbejde → fritidsinteresser → referencer. Flag missing or out-of-order sections.
 
-## Hobbies and life outside work
+**Personal info:** photo (head-and-shoulders) and date of birth or age remain common in DK; GDPR only stops employers from *requiring* them. Nationality/residency status is relevant under EU/non-EU rules. Marital status and children are optional and increasingly omitted. Note presence or absence neutrally, as observation.
 
-A short hobbies section is positive in DK. It signals work-life balance and gives the interviewer something human to ask about. Avoid generic ("reading", "travel", "spending time with friends"). Specific is better ("indoor climbing", "co-running a board game club", "long-distance cycling").
+**The person behind the facts:** fritidsinteresser and frivilligt arbejde read as genuine personality and reliability signals — foreningsliv counts. They give the interviewer something human to ask about. Specific beats generic ("indoor climbing", "co-running a board game club" over "reading", "travel"). Flag when absent or reduced to a bare word list.
 
-## Language considerations
+**Levels:** languages in CEFR (A1–C2) or the Danish scale — Modersmål, Flydende, Højt niveau, Mellemniveau, Grundlæggende — used for skills too. Levels are honest self-assessment; Danes will probe.
 
-- **Danish-language posting:** apply in Danish unless the posting explicitly invites English. English application to a Danish posting is a moderate negative — it suggests not bothering.
-- **English-language posting at a Danish company:** apply in English. Adding a line in Danish is unnecessary unless it reflects real proficiency.
-- **Mixed signals:** if the company communicates in English internally but the posting is Danish, the safe choice is Danish for the application + English-readable CV body if technical.
+**Referencer:** "Referencer oplyses gerne på forespørgsel" is standard. Named references are acceptable when cleared with them first.
 
-## Common Danish-CV mistakes from candidates with international backgrounds
+**Gaps:** parental leave (barsel), study and deliberate breaks are read pragmatically. Name them plainly.
 
-- Photo missing (US-style omission) — neutral, but slightly unusual.
-- DOB and nationality missing — same.
-- 3+ page CV in US "narrative" style — strongly negative.
-- Cover letter starts "I am writing to express my interest in..." — boilerplate, weak, AI-flavored.
-- Trying to translate American superlative tone directly to Danish — reads as off-key.
-- Treating skill levels as marketing claims rather than honest self-assessment.
+## Tone
 
-## Skill level conventions
+Janteloven shapes self-presentation: flat hierarchy, directness, understatement. The candidate presents as a **future colleague**, quietly confident.
 
-Danish CVs often use a 5-level or descriptor scale for skills/languages:
-- **Modersmål** (Native)
-- **Flydende** (Fluent)
-- **Højt niveau** (High)
-- **Mellemniveau** (Intermediate)
-- **Grundlæggende** (Basic)
+- Concrete achievements with numbers carry the confidence ("I led the migration of 40K customer records to the new CRM").
+- Direct confidence markers land: "I'm strong at…", "My responsibility was…", "I delivered…".
+- Collaboration and initiative ("jeg tog fat", "vi fik") land better than lone-hero framing.
+- Flag American-style superlatives — "world-class", "rockstar", "ninja", "guru", "passionate game-changer", "best-in-class", "proven track record of excellence". In DK they cost credibility.
 
-Or CEFR (A1–C2) for languages. Be honest — Danes will probe.
+**Sector:**
 
-## The "why us, why now" expectation
+- **Offentlig** (kommune/region/stat): more formal, addresses the posting's kvalifikationskrav fairly directly, frames impact on citizens and society, expects structure.
+- **Privat:** shorter, business outcomes, more room for personality.
 
-Danish hiring managers expect the cover letter to answer:
-1. **Why this role?** What drew you to it specifically?
-2. **Why this employer?** What do you know/like about them?
-3. **Why are you a fit?** Concrete pivot from your experience to their needs.
-4. **What kind of colleague are you?** The personlighed paragraph.
+## Application packet
 
-A cover letter missing any of these feels lazy. Especially #2 — generic "I'm interested in your company" applications get dropped.
+A typical packet: cover letter (1 page), CV (1–2 pages), diplomas/transcripts (often expected for entry level), anbefalinger from previous employers (common in DK), and a portfolio link or test result when requested. PDFs unless the posting says otherwise.
 
-## References
+## Opportunity check
 
-- **Available on request** is fine and common.
-- Listing references with names + titles + contact is also acceptable, but not expected; only do it if you've cleared it with the references first.
-
-## Application packet expectations
-
-A typical Danish application packet includes:
-1. Cover letter (1 page)
-2. CV (1–2 pages)
-3. Diplomas / transcripts (often expected, especially for entry-level)
-4. References / certificates from previous employers ("anbefalinger") — common in DK, less so in US
-5. Sometimes a portfolio link or a personality test result if requested
-
-Submit as PDFs unless the posting specifies otherwise.
+When the fit through the formal channel is weak, note whether an uopfordret ansøgning or a network/LinkedIn route would materially raise the odds — a large share of Danish positions are filled that way.

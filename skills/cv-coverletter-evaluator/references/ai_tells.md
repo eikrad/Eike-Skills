@@ -1,104 +1,78 @@
-# AI-tells in CVs and Cover Letters — Reference
+# Language & AI-tells — Perspective C
 
-The goal isn't to detect "did this person use AI" — most people do, and that's fine. The goal is to detect text that *reads* as AI-flavored: bland, indistinct, dressed-up, formulaic. Hiring managers see hundreds of these and skim past them.
+Three passes, in order. Each finding quotes the text it flags.
 
-Flag the **concentration** of tells. One em-dash isn't AI. Six em-dashes plus three "navigate"s plus a tricolon opening — that's AI without an editing pass.
+## 1. Mechanics
 
-## Lexical tells
+- Spelling: quote the wrong word and its correction.
+- Grammar, punctuation, capitalization. Danish capitalizes nouns far less than German — a frequent German-speaker error.
+- Date and number formats stay consistent. DK: `01.03.2024` or `1. marts 2024`; comma as decimal separator.
 
-Words that are common in AI-generated text and rarely show up in unfiltered human writing:
+## 2. Danish-as-a-second-language tells
 
-- delve / delving
-- leverage / leveraging
-- navigate / navigating (used metaphorically — "navigate complex challenges")
-- ensure
-- robust
-- comprehensive
-- seamless / seamlessly
-- holistic
-- synergy / synergies
-- streamline
-- empower / empowered
-- elevate / elevated
-- foster (a culture of...)
-- cultivate
-- tapestry
-- commendable
-- meticulous
-- intricate
-- realm
-- landscape (used metaphorically — "the modern hiring landscape")
-- bustling
-- testament (a testament to...)
-- pivotal
-- paramount
-- crucial / crucially
-- indispensable
-- groundbreaking
-- transformative
-- visionary
+German or English sentence structure carried into Danish, false friends, verb-second violations, over-long subordinate clauses. Report these as their own findings, apart from AI-tells — the fix differs.
 
-When these appear in a CV or cover letter that's otherwise plain, they stick out. When several appear in one paragraph, that paragraph is almost certainly AI without editing.
+## 3. AI-tells
 
-## Phrase tells
+The target is text that *reads* AI-flavoured — bland, indistinct, dressed-up, formulaic — because hiring managers skim past it. Whether AI was used is beside the point. Count tells per document; the **concentration** decides the finding.
 
-- "I am writing to express my interest in..."
-- "I am thrilled / excited / delighted to apply..."
-- "I am confident that my skills align..."
-- "In today's [adjective] world / fast-paced world / dynamic landscape..."
-- "Bridge the gap between..."
-- "I look forward to the opportunity to contribute..."
-- "I'm passionate about..."
-- "Drive results"
-- "Make a meaningful impact"
-- "Hit the ground running"
-- "Wear many hats"
-- "Think outside the box"
-- "Best of both worlds"
-- "Game changer"
-- "Dynamic and motivated individual"
-- "Proven track record" (still acceptable but tired)
-- "Results-driven / results-oriented"
-- "Self-starter with a passion for..."
+### Lexical
 
-## Structural tells
+delve · leverage · navigate (metaphorical: "navigate complex challenges") · ensure · robust · comprehensive · seamless · holistic · synergy · streamline · empower · elevate · foster (a culture of…) · cultivate · tapestry · commendable · meticulous · intricate · realm · landscape (metaphorical) · bustling · testament (a testament to…) · pivotal · paramount · crucial · indispensable · groundbreaking · transformative · visionary
 
-- **Em dashes used stylistically.** Cover letters with 2+ em dashes (—) are very often AI-drafted. Real people use commas, parentheses, or just two sentences.
-- **Tricolons** — three parallel items in one sentence ("strategic, scalable, and seamless"). One is fine; three across a single paragraph is AI.
-- **"Not just X, but Y" / "More than X — it's Y"** rhetorical patterns.
-- **Uniformly perfect bullet structure.** Every bullet starts with a strong verb in the same tense, with the same approximate length. Real CVs are messier than this — managers know it.
-- **Ladder of nouns at the end of sentences:** "...delivering value, innovation, and excellence." Common AI rhythm.
-- **Excessive hedging combined with confident claims:** "I have led numerous successful projects across various domains." All abstraction, no specifics.
-- **Symmetrical opening and closing.** "I am excited to apply..." / "I am excited at the opportunity..." Bookend feels like a template.
-- **Generic enthusiasm with no object.** "I'm passionate about innovation." (Innovation in what? Why?)
+In otherwise plain text these stick out; several in one paragraph mark it as unedited AI.
 
-## Substantive tells (the worst ones)
+### Phrases
 
-- **No specific knowledge of the employer.** Could be sent to any company in the industry.
-- **No specific role detail.** The cover letter doesn't refer to the actual job description.
-- **Skills listed but never demonstrated through example.**
-- **Claims with no number, no project name, no client.** "I led several major initiatives that delivered significant business impact" — a hiring manager learns nothing from this.
+- "I am writing to express my interest in…"
+- "I am thrilled / excited / delighted to apply…"
+- "I am confident that my skills align…"
+- "In today's fast-paced world / dynamic landscape…"
+- "Bridge the gap between…"
+- "I look forward to the opportunity to contribute…"
+- "I'm passionate about…"
+- "Drive results", "Make a meaningful impact", "Hit the ground running", "Wear many hats", "Think outside the box", "Best of both worlds", "Game changer"
+- "Dynamic and motivated individual", "Results-driven / results-oriented", "Self-starter with a passion for…"
+- "Proven track record" (tired rather than fatal)
 
-## What to do instead — calibration for the report
+### Structure
 
-When flagging tells, suggest:
-- Replace abstract praise of self with a concrete example.
-- Replace "leverage" with "use", "navigate" with "deal with", "ensure" with "make sure" or just delete.
-- Replace stylistic em-dashes with commas or a sentence break.
-- Open the cover letter with something that *only this person, applying to this role* could have written. A specific reason, a hook, a real reaction to the company.
+- **Stylistic em dashes** (— like this —). Two or more in a cover letter very often mean an AI draft; people write commas, parentheses or two sentences.
+- **Tricolons:** three parallel items in one sentence ("strategic, scalable, and seamless"). One is fine; three in a paragraph is a tell.
+- **"Not just X, but Y" / "More than X — it's Y".**
+- **Uniformly perfect bullets:** every one opens on a strong verb, same tense, same length. Real CVs are messier, and managers know it.
+- **Noun ladder at sentence end:** "…delivering value, innovation, and excellence."
+- **Hedged abstraction:** "various", "numerous", "a range of" in place of specifics ("I have led numerous successful projects across various domains").
+- **Symmetrical bookends:** "I am excited to apply…" / "I am excited at the opportunity…".
+- **Enthusiasm without an object:** "I'm passionate about innovation." (In what? Why?)
 
-## How strict to be
+### Substance (the heaviest)
 
-- **0–2 tells:** clean. Don't flag.
-- **3–5 tells:** worth a note in the report; suggest 1–2 specific rewrites.
-- **6+ tells:** the document reads as AI-drafted. Flag clearly and recommend a rewrite pass focused on adding specifics and removing patterns.
+- No specific knowledge of the employer — could go to any company in the industry.
+- No reference to the actual role or posting.
+- Skills listed, never shown through an example.
+- Claims with no number, project or client ("I led several major initiatives that delivered significant business impact").
 
-## Calibration: tells in Danish
+### Danish tells
 
-Danish AI-generated text has its own tells:
-- "I dagens hurtige verden..." (cf. "in today's fast-paced world")
-- "Det glæder mig at ansøge..." (overly formal opener)
-- Excessive use of "endvidere", "derudover", "i denne forbindelse"
-- Heavy use of "ikke kun X, men også Y"
-- "En afgørende rolle" (a crucial role) used repeatedly
-- Stiff, textbook formality where natural Danish would be slightly looser
+- "I dagens hurtige verden…"
+- "Det glæder mig at ansøge…" (overly formal opener)
+- Heavy "endvidere", "derudover", "i denne forbindelse"
+- Repeated "ikke kun X, men også Y"
+- "En afgørende rolle" used repeatedly
+- Textbook stiffness where natural Danish runs slightly looser
+
+## Tiers
+
+| Tells in a document | Verdict | Finding |
+|---|---|---|
+| 0–2 | Clean | Record the count only |
+| 3–5 | Noticeable | A note with 1–2 concrete rewrites |
+| 6+ | Reads as AI-drafted | Flag clearly; recommend a rewrite pass that adds specifics and removes the patterns |
+
+## Fixes to propose
+
+- Abstract self-praise → a concrete example.
+- "leverage" → "use"; "navigate" → "deal with"; "ensure" → "make sure", or cut.
+- Stylistic em dashes → commas or a sentence break.
+- Cover-letter opening → something only this person, applying to this role, could have written: a specific reason, a hook, a real reaction to the company.
