@@ -21,9 +21,9 @@ Everything here is written from scratch for my own daily work, then sharpened th
 
 ### feature-workflow
 
-`idea → scan → requirements → branch → phased plan → TDD loop → commit → PR`
+`idea → scan → requirements → branch → phased plan → tracer bullets → PR`
 
-The scan comes first and is not optional: conventions files are treated as law, the affected modules get read before anything is planned, and a red test suite stops the workflow before a line is written. The plan is then broken into phases flagged 🟢 isolated / 🟡 shared logic / 🔴 public interface, one commit per phase, so the history stays bisectable.
+The scan comes first and is not optional: conventions files are treated as law, the affected modules get read before anything is planned, and a red test suite stops the workflow before a line is written. The plan is then broken into phases tagged `isolated` / `shared` / `public` by risk, one commit per phase, so the history stays bisectable.
 
 Its sharpest rule is about tests: they live at seams and go through public interfaces. A test that reaches into private state or pins an implementation detail gets rejected rather than written — which is what keeps a suite from sprawling as the feature grows.
 
@@ -35,7 +35,9 @@ When your thinking stabilizes, it offers to close and produces a **Design Brief*
 
 ### cv-coverletter-evaluator
 
-Three weighted lenses, run independently so they don't blur into each other: a **hiring manager** reading for whether a human at this company understands it (40 %), a **Danish job-market expert** reading for local convention (35 %), and a **language reviewer** reading for AI tells (15 %). On top come cross-cutting checks for CV ↔ cover letter consistency and unquantified claims. ATS is only a parsing gate, run last — never an optimization target: a change that only helps a parser is Polish at most, and one that makes the document worse for a human reader is never recommended.
+The reader is a human at a specific Danish company, and everything is judged for them. It opens with the **Colleague Test**: close the documents and, from memory, say in two plain sentences what this person does and why they might fit. If that only works after re-reading, the application isn't legible, and that becomes the headline finding.
+
+Then three weighted lenses, run independently so they don't blur into each other: a **hiring manager** reading for whether a human at this company understands and believes it (40 %), a **Danish job-market expert** reading for local convention (35 %), and a **language reviewer** reading for AI tells (15 %). On top come cross-cutting checks for CV ↔ cover letter consistency, claims checked against the evidence, and unquantified bullets. ATS is only a parsing gate, run last, never an optimization target. Every recommendation has to pass the **Human Test** (would a human reader understand it better, believe it more, or want to meet this person more?). A change that only helps a parser is Polish at most, and one that helps a parser at the human reader's expense is dropped.
 
 The output is a full Markdown report — executive summary, success-potential rating, pros and cons, per-perspective findings, recommendations tiered Critical / Important / Polish, and a set of open questions to surface what you haven't thought to put on the page. Feedback is quoted and specific, because "add more numbers" cannot be acted on and "bullet 3 in role 2 has no number" can.
 

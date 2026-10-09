@@ -1,72 +1,46 @@
-# ATS (Applicant Tracking System) Compatibility — Reference
+# ATS gate
 
-Many medium-to-large Danish employers use ATS software (Workday, Greenhouse, Lever, HR-Skyen, HR-On, Emply, Talentech, etc.) to parse CVs into structured fields before a human ever sees them. A poorly parseable CV gets dropped or scored low even if the content is strong.
+A hygiene gate: its one job is to confirm the documents survive being opened and parsed. Report **Pass / Pass with notes / Fail** plus at most three lines. Every ATS recommendation also passes the Human Test.
 
-## Format checklist
+## Fail — the only ATS items that may be Critical
 
-Run through these against the CV:
+- Text stored as an image, or a scanned/non-text PDF. Test: select and copy text from the PDF.
+- A multi-column layout whose main column interleaves on extraction.
+- Contact details only inside a header/footer graphic.
+- A file format the employer's system cannot accept. Submit the rendered PDF (DOCX also works); LaTeX source is a working file.
 
-### Section headings
-Use standard, recognizable headings. ATS look for these as anchors.
+**awesome-cv and similar LaTeX templates:** copy-paste the rendered PDF and confirm the text comes out clean and in order — glyphs can embed as paths, and sidebars or timelines can scramble extraction. If it fails, suggest a plainer template for this application.
 
-| Standard EN | Standard DA | Avoid |
-|-------------|-------------|-------|
-| Experience / Work Experience / Professional Experience | Erfaring / Erhvervserfaring | "Where I've been", "My journey" |
+## Pass with notes — [Polish] at most
+
+**Section headings:** standard Danish or English names.
+
+| English | Danish | Non-standard (note) |
+|---|---|---|
+| Experience / Work Experience | Erfaring / Erhvervserfaring | "Where I've been", "My journey" |
 | Education | Uddannelse | "Schools" |
 | Skills | Kompetencer / Færdigheder | "What I do well" |
 | Certifications | Certifikater | "Wall of fame" |
-| Languages | Sprog | (just don't be cute) |
-| Summary / Profile | Profil / Kort om mig | "About me" is OK |
+| Languages | Sprog | — |
+| Summary / Profile | Profil / Kort om mig | "About me" is fine |
 
-### Dates
-- [ ] Consistent format throughout: `2022–Present`, `Jan 2020 – Dec 2022`, `2018-2021`. Don't mix `2020` with `January 2020` with `01/2020`.
-- [ ] Use real hyphens or en-dashes; avoid weird Unicode separators.
-- [ ] In Danish: `2020-2023` or `jan. 2020 – dec. 2022` is fine; avoid mixing.
+**Dates:** one format throughout (`2022–Present`, `Jan 2020 – Dec 2022`, `jan. 2020 – dec. 2022`), with plain hyphens or en dashes.
 
-### Contact information
-- [ ] Full name, phone (with country code +45 for DK), email, city (or city + country), LinkedIn URL.
-- [ ] Photo is fine for DK CVs but should be embedded as image *outside* the parsing-critical area (top-right corner is typical).
-- [ ] Plain text email — no fancy formatting, no email-as-image.
+**Glyphs:** decorative icons standing in for labels.
 
-### File format
-- **PDF (text-based)** — best, as long as it's not a scanned image. Test: can you select and copy text from the PDF? If yes, parseable.
-- **DOCX** — also good, sometimes preferred by older ATS.
-- **TEX / LaTeX source** — never submit. Submit the rendered PDF.
-- **Scanned PDF / image** — bad. Always use the text-based version.
+**Contact block:** full name, phone with +45, plain-text email, city, LinkedIn URL. A photo sits outside the parsing-critical area (top right is typical).
 
-### Filename
-- [ ] Format: `Firstname_Lastname_CV.pdf` or `Firstname_Lastname_CV_CompanyName.pdf`.
-- [ ] No spaces if possible (use underscores), no special characters, no Danish letters in filenames if international ATS.
+**Filename:** `Firstname_Lastname_CV_Company.pdf` pattern — underscores, plain ASCII (the repo's `Rades_CV_<Company>_<Language>.pdf` fits).
 
-## Keyword matching
+**Cover letter:** plain single-column body, address block at the top, all text as text.
 
-ATS rank applications by keyword overlap with the job posting. If a posting was provided, do this:
+## Vocabulary mirroring — budget of 5
 
-1. Extract the top 8–12 hard skills, tools, and qualifications from the posting (e.g., "Python", "GDPR", "stakeholder management", "Pharma", "B2B SaaS", "MSc", "5+ years", "Danish C1").
-2. Search the CV for each. Note presence (verbatim or near-match) or absence.
-3. Recommend incorporating missing keywords *if they're true of the candidate* — never invent. Suggest natural placements (skills section, role bullet, or summary).
+With a posting, pick up to **5** central terms the posting uses for things the candidate has genuinely done and the CV describes in other words. Recommend rewording those five at most. Each item:
 
-A good fit hits 60–80% of the keywords; below 40% the CV will likely score low regardless of quality.
+- describes experience the candidate actually has, at its true size;
+- rewrites an existing line in place;
+- reads naturally to a human and passes the Human Test;
+- is **[Polish]** — unless the term is central to how the hiring manager thinks about the role, in which case it moves to Perspective A.
 
-## Cover letter ATS
-
-Cover letters are parsed less aggressively than CVs, but the same principles apply:
-- Plain text body, single column.
-- Address block at top.
-- No text-in-image elements.
-
-## Special considerations for awesome-cv / LaTeX-rendered CVs
-
-The `awesome-cv` LaTeX template (and similar) produces beautiful CVs but can have ATS pitfalls:
-- Font rendering may embed glyphs as paths, not text — check by selecting and copying text.
-- Sidebar/timeline visualizations can confuse parsers.
-- Custom heading styles may not match standard "Experience"/"Education" anchors — check that the underlying text is still standard words.
-
-If the candidate uses awesome-cv or similar: confirm that copy-paste from the rendered PDF gives clean, ordered text. If not, suggest a plainer template for ATS-heavy applications.
-
-## Summary advice for the report
-
-Always include in the ATS section:
-1. Single line on overall parseability ("Likely parses well" / "Some risk" / "Significant risk").
-2. If a posting was provided: list of matched keywords and missing keywords.
-3. One-line recommendation if any major issues found.
+Every vocabulary item is a rewrite of a true line in the employer's words. When the candidate has not done the thing, the finding is "this posting may not fit" — keyword lists, skills clouds, hidden text and repeated terms stay out of the recommendations.
