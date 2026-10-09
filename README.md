@@ -21,9 +21,9 @@ Everything here is written from scratch for my own daily work, then sharpened th
 
 ### feature-workflow
 
-`idea → scan → requirements → branch → phased plan → TDD loop → commit → PR`
+`idea → scan → requirements → branch → phased plan → tracer bullets → PR`
 
-The scan comes first and is not optional: conventions files are treated as law, the affected modules get read before anything is planned, and a red test suite stops the workflow before a line is written. The plan is then broken into phases flagged 🟢 isolated / 🟡 shared logic / 🔴 public interface, one commit per phase, so the history stays bisectable.
+The scan comes first and is not optional: conventions files are treated as law, the affected modules get read before anything is planned, and a red test suite stops the workflow before a line is written. The plan is then broken into phases tagged `isolated` / `shared` / `public` by risk, one commit per phase, so the history stays bisectable.
 
 Its sharpest rule is about tests: they live at seams and go through public interfaces. A test that reaches into private state or pins an implementation detail gets rejected rather than written — which is what keeps a suite from sprawling as the feature grows.
 
