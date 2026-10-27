@@ -76,6 +76,7 @@ Read as a busy hiring manager **at this company**: 30 seconds for the cover lett
 - **So-what test:** ask of each bullet "and what changed because of that?" A task with no outcome fails.
 - **Ownership test:** can the reader tell the candidate did it? A bullet describing a system ("Agents: systems that plan a task …") leaves open whether the candidate built, used or read about it. Rewrite to open on a verb with the candidate as subject ("built", "measured", "led"). Added after a reader caught such bullets on the general CV (2026-10-07) that had passed the other tests.
 - **Repo-inventory test:** strip every tool, model and library name from a bullet. If a list of components remains instead of a problem and a result, the bullet inventories a repository. A technical reader can decode every term and still not know what was built or why it mattered. Rewrite led by the problem; assume the reader skips repo links (some repos are private).
+- **System test:** where the candidate built a whole system (an evaluation, a pipeline, a workflow), the bullet describes that system and ends on the decision it drives ("retrieval, model and prompt changes are decided on its results"), with at most one concrete case as a clause proving the system bites. Quote each bullet that argues with a single score, run or experiment drawn from a system ("92 % of 39 passed", "reverted a BM25 hybrid") and recommend the system plus its decision; the case itself goes to the interview. Numbers that are the result or the scale of the whole work (users, time saved, test-set size) pass, and so does a case for a technique the posting names. A list of the system's parts without the decision fails the repo-inventory test. Added after the candidate found his Projects section undersold a complete evaluation system by quoting single results from it (Eike, 2026-10-27).
 - **Vocabulary mirroring:** where true experience is described in words the company does not use, recommend the same true claim in *their* words — translation for a human reader, claim unchanged.
 - **Domain translation:** when changing field, sector or country, the bridge must be explicit and the pivot motivated in one clear sentence.
 
@@ -88,7 +89,7 @@ Read as a busy hiring manager **at this company**: 30 seconds for the cover lett
 - Which two questions would you ask in the interview? Basic clarifications of *what he actually did* signal a comprehension problem, not an interview hook.
 - Would you want to meet this person? One honest sentence.
 
-**Done when:** every CV bullet and every letter paragraph has been through the so-what, ownership and repo-inventory tests, failures quoted with a rewrite; the jargon list is complete; the two interview questions are written; 6–10 findings.
+**Done when:** every CV bullet and every letter paragraph has been through the so-what, ownership, repo-inventory and system tests, failures quoted with a rewrite; the jargon list is complete; the two interview questions are written; 6–10 findings.
 
 ### 4. Perspective B — Danish job market (35 %)
 
@@ -115,7 +116,7 @@ Read `references/ai_tells.md` now and apply it: mechanics, second-language tells
 **Claims & evidence check (Awesome-eik repo)** — judged against the source of truth, since a document can read well and still be wrong or leave out its best material.
 
 - **Claims:** for each quantified, ownership or qualifier claim ("built", "operate", "production", "daily", "validated", "checked against the source"), grep `candidate_profile_extended.md` and `claim-wording.md`. Unsupported → A finding, "remove or verify". Contradicts `claim-wording.md` → Critical (A).
-- **Evidence left on the table:** name the three strongest posting-relevant facts in the profile (user counts, before/after results, employer-anchored outcomes; start from the Evidence floor in `claim-wording.md`). Each one the CV omits → A finding with a rewrite. Test counts and repo sizes are inventory, not outcomes.
+- **Evidence left on the table:** name the three strongest posting-relevant facts in the profile (user counts, before/after results, employer-anchored outcomes; start from the Evidence floor in `claim-wording.md`). Each one the CV omits → A finding with a rewrite. Test counts and repo sizes are inventory, not outcomes. A fact that belongs to a system (a calibration result, one experiment, one run) counts as on the page when its system is described with its decision.
 - **Shape claims:** before writing that the letter "has" an element (availability, personal paragraph, call to action), quote the sentence that shows it. No quote → it is missing.
 
 **Red flags & quantification**
