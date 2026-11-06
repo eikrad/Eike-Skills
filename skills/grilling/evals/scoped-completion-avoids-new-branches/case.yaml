@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: scoped-completion-avoids-new-branches
+expected_outcome: |
+  All material choices for the agreed scope are settled. The reply closes the scoped grill with a concise handoff, preserves explicit non-goals, and does not keep the frontier open by inventing unrelated feature decisions.

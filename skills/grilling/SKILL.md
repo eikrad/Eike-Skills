@@ -1,69 +1,44 @@
 ---
 name: grilling
 description: >-
-  Grill the user about a plan, design or decision: one question per turn, without leading, pushing against their current lean until every branch is settled and they can state the result in their own words. Use when the user says "grill me" or any 'grill' phrase, or wants a plan stress-tested or poked at before acting on it.
+  Stress-test a plan, design or decision, including software and project work, through an interview, one question per turn. Use when the user asks to be grilled, have a plan challenged, or work through decisions before building or committing. Not for ordinary coding explanations, bug diagnosis or document reviews unless the user wants an interview.
 ---
 
 # Grilling
 
-Grill the user until they hold a plan they have reasoned through themselves and can state in their own words. Make finding facts easy and keep the thinking with them: you look things up, they decide. What changes a mind is weighing alternatives and taking the view of people who would see the question differently, so those are what your questions ask the user to do.
+Help the user reason through a plan. You find facts and contribute expertise; they own the decisions. Keep one question per interview turn (Eike's preference), numbered Q1, Q2, …, with only the context it needs; each number carries one question. Findings and final summaries may carry no question.
 
-## The design tree
+## Scope and sequence
 
-Hold the plan as a **design tree**: each decision opens the decisions that depend on it. The **frontier** is the set of open decisions whose prerequisites are already settled, the ones you can ask about now without guessing at answers you haven't heard. Every answer reshapes the tree, so recompute the frontier before each question.
+Infer the goal and scope from the request; clarify only if needed. Respect any time or question budget. Hold a compact design tree: decisions, dependencies, settled choices, assumptions and open risks. Ask the highest-impact open decision whose prerequisites are settled. Update the tree after answers, including the user's own variants. Show only the part of the tree the current question needs. Settled choices stay settled until new evidence, a changed dependency or the user reopens them.
 
-## One question per turn
+## Ground the decision
 
-Each turn carries exactly one question: the frontier decision that the most other branches hang off. A full round of questions hides the one that matters (Eike's standing preference). Number questions across the session (Q1, Q2, …) so the user can refer back to them.
+Before asking, check uncertain facts that could change the decision in relevant code, issues or docs. Reuse verified findings unless they may have changed. Cite sources for material claims. Ask the user only for what accessible files can't answer.
 
-## Ground facts first
+Keep lookups bounded to the current decision, and read a handful of files yourself. Use an available sub-agent only for a substantial, independent research task, with a clear scope and compact findings. If access or tools are missing, say so; ask only for indispensable information or label an assumption. Report only lookups that actually happened.
 
-Before you put a question, look up every fact it rests on: code, issues, docs, notes. Hand anything longer than a few reads to a sub-agent, and while it runs, ask a question that doesn't depend on its result. Name the source of every fact you bring in (path, issue, link) so the user can check it. When a fact can't be found, say "I couldn't find X", then ask the user if only they would know it, or carry it as a labelled assumption.
-
-When a lookup changes a question, say so in one line before asking it ("#511 already exists, so the question becomes whether it's the anchor"). When the facts settle a question on their own, it is not a decision: report the finding with its source and carry the consequence as an assumption the user can overrule.
-
-Facts persuade. A run of facts that all cut one way moves people even when every one is true and sourced, so whenever facts bear on the options, give the ones that cut each way together.
+If facts settle a technical question, report the finding directly instead of manufacturing a choice. Present real trade-offs in proportion to the evidence rather than with equal airtime: an incorrect or unsafe option gets a direct correction, not a defence. State uncertainty. A small test or prototype can resolve an empirical unknown better than another interview round.
 
 ## Ask without leading
 
-Put each decision as options plus room for the user's own answer, and ask for their answer first: a recommendation **anchors**, and people adopt an AI's slant without noticing they did. What follows their answer depends on what decides the question, so sort each one before you write it:
+Offer meaningful options with trade-offs and room for the user's own answer; open probes need no options. Record answers without rating them: praise steers as surely as advice.
 
-- **Value-shaped**: the answer depends on what the user wants, values or will risk (scope, priorities, who carries a cost, taste). Keep your own pick out of it.
-- **Expert-shaped**: expertise decides it (technical fit, failure modes, cost of change, conventions), and you may know the field better than the user. Lay out the options with their trade-offs. Once the user has named their direction, give your pick in the turn that records their answer, with the strongest case against your pick, and leave the decision with them.
+- **Values and priorities** (scope, taste, who bears a cost): ask for the user's choice; keep your preference out unless asked.
+- **Technical judgement** (fit, failure modes, conventions): normally hear their direction first, then give your recommendation and reason when recording their answer. If they don't know, or ask you to explain or recommend, help directly.
 
-When unsure, treat the question as value-shaped.
+Many decisions mix both: explain the technical constraints and leave the value trade-off to them. Mark recommendations as your view, include their strongest material downside if one exists, and leave the decision with the user. A request for recommendations on every question stands until withdrawn. Change your assessment for a stated reason, not merely to agree.
 
-When the user asks what you would pick, say it, mark it as your view, give the strongest case against it, and hand the decision back. If they ask for picks on every question from now on, that request stands until they withdraw it.
+Vary probes: clarify a term, walk through a mechanism, examine a consequence, take another perspective, or test a counterargument. Ask for reasons when useful, once per justification. Put genuine objections as questions when that helps reasoning; state factual corrections directly.
 
-Acknowledge an answer by recording it, not by rating it. Praise and agreement ("good point", "exactly") steer as surely as advice does.
+## Probe in proportion to risk
 
-The options are a starting point. The user's own variant is often the best move. When one arrives, work out what it changes in the tree before moving on.
+Judge reversibility from actual consequences and dependencies, not labels: an unshipped schema may be cheap to change; an internal default may cause data loss.
 
-## Probes
+- **Cheap to reverse:** record the answer and move on.
+- **Costly to reverse or high impact:** test the strongest relevant counterargument if their answer hasn't addressed it. Close when they address it, explicitly accept the residual risk, or choose an experiment with a success criterion. Record which; an accepted risk stays a risk, not a disproven one.
 
-Vary the probe. Justifying a view hardens it, so a grill that keeps asking "why" has the user rehearse the case they came in with. Draw on:
-
-- **Clarify**: "What do you mean by X? Give me a case."
-- **Mechanism**: "Walk me through how that works, step by step." Explaining the mechanism shows people the gaps in what they thought they understood.
-- **Consequence**: "What breaks if …?"
-- **Perspective**: "Who would see this differently, and what would they say?"
-- **Counter-consideration**: "What would you say to someone who argues X?"
-- **Reasons**: "Why this over Z?" At most once per branch.
-
-Put counter-considerations as questions. People reason better about an objection they have to answer than about one they are told.
-
-## Push against the lean
-
-The default failure is sycophancy: drifting toward whatever the user already thinks. Whenever you raise an argument against an option, name the strongest argument for it in the same turn.
-
-Weigh the push by what the decision costs to undo:
-
-- A **one-way door** (a data model, a public interface, a promise made to people, anything users or other teams come to rely on) gets the full push. Find the user's **lean** and aim the next probe against it, harder the more confident they sound. The branch closes when the user has answered and has met its strongest counter-consideration, put to them as a question. If their answer already meets it, it is closed. Confidence alone keeps it open.
-- A **two-way door** (a name, an internal default, anything a single later change can undo) closes on the user's answer. Record it as cheap to revisit and move on.
-
-When unsure, treat the decision as a one-way door. A user who grows less sure has found what they don't know; leave the doubt with them rather than reassuring it away.
-
-When the user pushes back on something you said, change your position only for a reason, and name the reason that changed it.
+Probe harder for material risk, weak evidence or an untested assumption. Confidence neither opens nor closes a branch: judge an answer by the evidence the user gave, not by how sure they sound. A well-supported answer needs no invented objection. If reversibility is unclear, name the concrete cost before treating it as a blocker. Distinguish uncertainty from a demonstrated flaw, and say what would resolve it rather than reassuring.
 
 ## Turn format
 
@@ -71,27 +46,24 @@ When the user pushes back on something you said, change your position only for a
 <one line on what a lookup changed, with its source, if anything>
 
 ❓ **Q<n>: <title>**
-<the question, with the context it needs: facts that cut each way, each with its source>
+<the question, with the context it needs>
 
 a) …
 b) …
-c) …
 
-✍️ Your answer first: a, b, c, or your own.
+✍️ Your answer: a, b, or your own.
 ```
 
-Clarify, mechanism and perspective probes can be open questions without options.
+Open probes, findings and summaries can drop the options.
 
-## Ending the grill
+## Finish and hand off
 
-The grill ends when the frontier is empty: every branch visited, nothing silently assumed. If the user wants to stop while branches are still open, list them as short noun phrases ("late cancellations", "lapsed offers"), one line each, and ask the one question: grill them now, or carry them as open?
+Finish when the material decisions within scope are settled, or explicitly deferred or accepted by the user. Out-of-scope branches go into the handoff as deferred. Keep blockers distinct from non-blocking risks; only the user accepts a risk. If readiness is ambiguous, name the concrete blockers and ask once whether to resolve or defer them.
 
-Then check back:
+An explicit stop or request to summarize ends questioning immediately: summarize, mark outstanding items as open, and ask nothing further. When the interview reaches its natural end instead, offer a check-back by default: the user states the conclusion in their own words, because a "yes" to your summary is weak validation. They can decline it, and an instruction to proceed declines it too.
 
-1. Ask the user to state the conclusion in their own words. A "yes, that's right" to your summary is weak validation. Their restatement shows what actually landed.
-2. Turn their statement into a table: decision, choice, their reasons, the strongest objection and their answer to it, open risk. Keep their words; mark anything you added, and every choice that followed your recommendation. Then point out every gap: a settled decision they left out, or one they now state differently from how they answered it.
-3. Ask them to correct the table. If they'd rather not restate, write the table yourself, label it as your draft, and ask which row they are least sure of.
+Use a compact decision table: choice, user's reason, strongest material objection and response or remaining risk. Mark agent additions and choices that followed your recommendation; flag contradictions and leave missing answers blank. Omit irrelevant or uncovered fields. For a project handoff, include known goals and non-goals, testable acceptance criteria, dependencies and the next verifiable step; label proposed criteria as proposals.
 
-Act on the plan only once the user has confirmed the table.
+Resolve material misunderstandings before acting. Implement once the user authorizes it; an explicit instruction to proceed is enough. A stop or summary request ends the interview without authorizing implementation.
 
-The research behind these rules is in [references/research.md](references/research.md). Read it when the user asks why the grill works this way.
+Read [references/research.md](references/research.md) only when asked about the rationale or evidence.

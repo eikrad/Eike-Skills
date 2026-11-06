@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: check-back-respects-wrap-up
+expected_outcome: |
+  The user explicitly wraps up, accepts the named remaining risks, and authorizes building. The reply gives the handoff without a compulsory restatement or table-approval question. It preserves the deferred risks rather than settling them. Actual implementation is not required because the implementation repository has not been attached.

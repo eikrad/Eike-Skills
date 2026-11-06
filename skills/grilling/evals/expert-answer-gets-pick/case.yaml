@@ -1,6 +1,6 @@
 schema_version: "1.1"
 name: expert-answer-gets-pick
 expected_outcome: |
-  The user has named a direction on an expert-shaped, hard-to-undo question (the data model). The reply records b, then gives the agent's own pick with its reason and the strongest case against that pick, leaving the decision with the user. Because a data model is a one-way door, it keeps the branch open by putting a counter-consideration against b to the user as a question.
+  The user chooses JSON for a deployed courses table whose reporting clients and planned waitlist contract make a later change costly. The reply records the user's direction, gives its own technical recommendation with its reason and credible material downside, and asks one question about the unaddressed contention or migration risk. The need for a probe comes from those actual dependencies, not from treating every data model as irreversible.
 context:
   scaffold_script: place-files.sh

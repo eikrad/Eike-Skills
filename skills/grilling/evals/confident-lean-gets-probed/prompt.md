@@ -11,6 +11,8 @@ Continuing the Clubhouse waitlist grill (booking app for a tennis club). Settled
 - Q3: a freed spot is offered to the next person with a 2-hour window to confirm, then it moves on.
 - Q4: offers go out by email through the existing notification module.
 
+This choice will be announced as the club-wide booking policy for the next season. Reversing it would withdraw a published promise to members or guests.
+
 You asked:
 
 ❓ Q5: Should members go ahead of guests in the waitlist?

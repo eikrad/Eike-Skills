@@ -17,7 +17,7 @@ Everything here is written for my own daily work, then sharpened through use. No
 | --- | --- | --- |
 | [**feature-workflow**](skills/feature-workflow/SKILL.md) | Drives a feature from idea to committed, tested code through a strict red-green-refactor loop | You want to build a feature, ask what's next on the roadmap, need a feature branch, or say TDD |
 | [**socratic-interviewer**](skills/socratic-interviewer/SKILL.md) | Interviews you about a design decision without ever offering an opinion, then writes up a design brief | You're wrestling with an architecture or UX question and haven't reached an answer yet |
-| [**grilling**](skills/grilling/SKILL.md) | Grills you on a plan one question per turn without leading, pushing against your current lean, until you can state every decision in your own words | You have a plan and want it stress-tested before you build it, or you say "grill me" |
+| [**grilling**](skills/grilling/SKILL.md) | Stress-tests a plan one question per turn, with grounded facts, technical advice and scrutiny proportional to risk | You want an interview to challenge a plan (software, project or otherwise) before building or committing |
 | [**cv-coverletter-evaluator**](skills/cv-coverletter-evaluator/SKILL.md) | Reviews a CV and cover letter through three independent lenses and returns a prioritized report | You want an application critiqued, scored, or checked for AI tells |
 
 ### feature-workflow
@@ -36,16 +36,15 @@ When your thinking stabilizes, it offers to close and produces a **Design Brief*
 
 ### grilling
 
-Based on [Matt Pocock's `grilling` skill](https://github.com/mattpocock/skills), used under its MIT license (notice in [`skills/grilling/NOTICE.md`](skills/grilling/NOTICE.md)). From there it keeps the plan held as a design tree, the next question drawn from the frontier of decisions whose prerequisites are settled, and facts looked up by the agent while the decisions stay yours. What changes comes from the literature review behind a 1:1 Socratic interview feature (persuasion, sycophancy, deliberation research). The aim is a grill that asks hard questions without leading:
+Based on [Matt Pocock's `grilling` skill](https://github.com/mattpocock/skills), used under its MIT license (notice in [`skills/grilling/NOTICE.md`](skills/grilling/NOTICE.md)). It keeps the design tree and the split between facts the agent looks up and decisions you own. Its interview rules draw on persuasion, sycophancy and deliberation research, adapted to software, project and other plan decisions rather than validated as a complete workflow.
 
-- **One question per turn**, not a full round, so the question that matters doesn't get buried.
-- **Your answer first.** Each decision comes as options plus room for your own answer, because people adopt an AI's slant without noticing. On value questions (scope, priorities, who carries a cost) the agent keeps its pick to itself unless you ask. On expert questions (technical fit, failure modes) it gives its pick once you've named your direction. Either way the pick is marked as its view and comes with the strongest case against it.
-- **Facts that cut each way, with sources.** Dense one-sided facts are the strongest persuasion lever there is, even when every one is true, so the agent shows the facts on both sides together and names where each comes from.
-- **Varied probes instead of looping on "why".** Justifying a view hardens it. The grill asks you to walk through the mechanism, the consequences and the views of people who would disagree, and it puts objections to you as questions.
-- **Pushback against your lean, weighted by reversibility.** Sycophancy is the default failure. On one-way doors (data models, public interfaces, promises to people) a branch closes when you've answered its strongest counter-consideration, not when you sound sure. Two-way doors close on your answer, so a large plan doesn't drown in small decisions. The agent changes its own position only for a reason it names.
-- **A check-back in your own words.** You state the conclusion first. The agent turns it into a decision table that marks what it added and which choices followed its recommendation, then points out what you left out or now state differently.
+- **One question per interview turn.** Questions follow dependencies within your scope and any budget you set. A requested summary needs no further question.
+- **Your priorities, with expertise available.** Value choices stay yours. For technical choices, the agent normally hears your direction first, then recommends an approach with its material downside. If you don't know or ask for advice, it helps directly.
+- **Bounded, sourced research.** The agent checks facts that could change the decision and reuses findings. It presents credible trade-offs in proportion to evidence, corrects factual errors directly, and delegates only substantial independent research when tools are available.
+- **Probes proportional to risk.** Real costs and dependencies determine reversibility. Important choices get their strongest counterargument tested; well-supported answers, explicit acceptance of residual risk, or an experiment with a success criterion can close the branch. Confidence alone neither opens nor closes a branch: what counts is the evidence you gave.
+- **A usable finish.** The grill closes when material decisions within scope are settled or explicitly deferred. A clear stop or summary request ends questions immediately. The handoff records choices and risks and, for project work, known acceptance criteria, dependencies and the next verifiable step. At a natural end the agent offers a check-back in your own words, which you can decline; an explicit stop or instruction to implement skips it and needs no separate table approval.
 
-The sources behind each rule are in [`references/research.md`](skills/grilling/references/research.md). Test cases live in `skills/grilling/evals/`.
+The rationale and its limits are in [`references/research.md`](skills/grilling/references/research.md). Behavioral test cases and evaluation guidance live in [`skills/grilling/evals/`](skills/grilling/evals/README.md); they are separate from the structural validator below. Ordinary coding explanations and bug diagnosis do not require this interview.
 
 ### cv-coverletter-evaluator
 

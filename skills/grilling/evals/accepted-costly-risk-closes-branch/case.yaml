@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: accepted-costly-risk-closes-branch
+expected_outcome: |
+  The user has already addressed the strongest counterargument and explicitly accepted a known risk of changing a deployed data model. The reply records the choice with its accepted risk, closes that branch, and moves to the requested next decision without repeating the objection or demanding confirmation.

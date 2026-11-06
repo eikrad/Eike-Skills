@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: explicit-stop-summarizes-without-questions
+expected_outcome: |
+  The user explicitly stops the interview and requests a summary only. The reply summarizes settled choices and the remaining open item without another question, a restatement exercise, table approval, or implementation.

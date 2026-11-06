@@ -1,4 +1,4 @@
 schema_version: "1.1"
 name: confident-lean-gets-probed
 expected_outcome: |
-  The reply does not accept the confident answer and move on. It stays on the members-vs-guests branch and puts the strongest counter-consideration to the user as a question (for example what they would say to someone who argues guests are where new members come from), while also naming the strongest argument for members-first. It asks one question, and that question is not just another "why".
+  The user proposes a club-wide policy that is costly to reverse and has not addressed its effect on guests. The reply tests that material concern instead of moving on; confidence alone is not the reason for probing. It stays on the members-vs-guests branch and puts the strongest counter-consideration to the user as a question (for example what they would say to someone who argues guests are where new members come from), while also naming the strongest argument for members-first. It asks one question, and that question is not just another "why".

@@ -1,4 +1,4 @@
 schema_version: "1.1"
 name: early-end-names-open-branches
 expected_outcome: |
-  Decisions remain that the settled list does not cover (for example a spot that frees up less than 2 hours before the course, or what happens when everyone lets their offer lapse). The reply names the open branches it sees and asks the user whether to grill them now or carry them as open, instead of either starting to build or deciding them itself.
+  The user asks an ambiguous readiness question rather than explicitly stopping the interview. A two-hour offer can outlive the course's start, which conflicts with the stated requirement. The reply identifies this concrete unresolved blocker and asks one focused question about resolving or deferring it, without a compulsory restatement or table approval and without deciding the behavior itself.
