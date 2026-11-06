@@ -47,6 +47,13 @@ In a 1:1 there is no group to push back, so the realistic failure is the agent p
 
 So the user restates first and the agent structures. The table marks what the agent added and which choices followed its recommendation. If the user would rather not restate, the agent's table is labelled as a draft and the user is asked which row they are least sure of.
 
+## Not from the literature: expert-shaped questions and one-way doors
+
+Two rules were added for using the grill on software and project decisions. Neither comes from the sources above.
+
+- **Expert-shaped questions get the agent's pick after the user's direction.** The studies above concern opinions, where the AI's slant is the risk. In software, the agent's expertise is often the point of asking it: "table or JSON column?" is decided by failure modes, not by values. So the user names a direction first (keeping the anchoring protection from Jakesch et al.), and the agent then gives its pick with the strongest case against it.
+- **One-way and two-way doors.** The full push (a branch closes only on an answered counter-consideration) makes a grill on a large plan slow, including for decisions a single later change can undo. The split follows the familiar practitioner heuristic of reversible vs. irreversible decisions. Promises to people count as one-way doors, because taking something back from users costs more than not giving it.
+
 ## Observed in the P9.17 grill session
 
 - One question per turn kept answers fast. With a recommendation attached, Eike still picked against it at least four times (Q6, Q7, Q9, Q14). But the agreeing answers may have been anchored, and Jakesch suggests nobody would have noticed.

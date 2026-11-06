@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: two-way-door-closes-on-answer
+expected_outcome: |
+  A setting's name is a two-way door: one later change undoes it. The reply records a and moves on without probing the choice, and asks one question about the next open decision (what happens when an offer email bounces).

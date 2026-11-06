@@ -26,7 +26,12 @@ Facts persuade. A run of facts that all cut one way moves people even when every
 
 ## Ask without leading
 
-Put each decision as options plus room for the user's own answer, and ask for their answer first. Keep your own pick out of it: a recommendation **anchors**, and people adopt an AI's slant without noticing they did.
+Put each decision as options plus room for the user's own answer, and ask for their answer first: a recommendation **anchors**, and people adopt an AI's slant without noticing they did. What follows their answer depends on what decides the question, so sort each one before you write it:
+
+- **Value-shaped**: the answer depends on what the user wants, values or will risk (scope, priorities, who carries a cost, taste). Keep your own pick out of it.
+- **Expert-shaped**: expertise decides it (technical fit, failure modes, cost of change, conventions), and you may know the field better than the user. Lay out the options with their trade-offs. Once the user has named their direction, give your pick in the turn that records their answer, with the strongest case against your pick, and leave the decision with them.
+
+When unsure, treat the question as value-shaped.
 
 When the user asks what you would pick, say it, mark it as your view, give the strongest case against it, and hand the decision back. If they ask for picks on every question from now on, that request stands until they withdraw it.
 
@@ -49,9 +54,14 @@ Put counter-considerations as questions. People reason better about an objection
 
 ## Push against the lean
 
-The default failure is sycophancy: drifting toward whatever the user already thinks. On each branch, find the user's **lean** and aim the next probe against it, harder the more confident they sound. Whenever you raise an argument against an option, name the strongest argument for it in the same turn.
+The default failure is sycophancy: drifting toward whatever the user already thinks. Whenever you raise an argument against an option, name the strongest argument for it in the same turn.
 
-A branch closes when the user has answered and has met its strongest counter-consideration, put to them as a question. If their answer already meets it, the branch is closed. Confidence alone keeps it open. A user who grows less sure has found what they don't know; leave the doubt with them rather than reassuring it away.
+Weigh the push by what the decision costs to undo:
+
+- A **one-way door** (a data model, a public interface, a promise made to people, anything users or other teams come to rely on) gets the full push. Find the user's **lean** and aim the next probe against it, harder the more confident they sound. The branch closes when the user has answered and has met its strongest counter-consideration, put to them as a question. If their answer already meets it, it is closed. Confidence alone keeps it open.
+- A **two-way door** (a name, an internal default, anything a single later change can undo) closes on the user's answer. Record it as cheap to revisit and move on.
+
+When unsure, treat the decision as a one-way door. A user who grows less sure has found what they don't know; leave the doubt with them rather than reassuring it away.
 
 When the user pushes back on something you said, change your position only for a reason, and name the reason that changed it.
 

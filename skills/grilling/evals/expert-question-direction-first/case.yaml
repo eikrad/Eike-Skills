@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: expert-question-direction-first
+expected_outcome: |
+  The open question is decided by technical expertise (scheduling, failure modes), not by the user's values. The reply lays out the options with their trade-offs and asks for the user's direction first, keeping its own pick back until the user has answered.
+context:
+  scaffold_script: place-files.sh

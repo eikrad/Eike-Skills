@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: expert-answer-gets-pick
+expected_outcome: |
+  The user has named a direction on an expert-shaped, hard-to-undo question (the data model). The reply records b, then gives the agent's own pick with its reason and the strongest case against that pick, leaving the decision with the user. Because a data model is a one-way door, it keeps the branch open by putting a counter-consideration against b to the user as a question.
+context:
+  scaffold_script: place-files.sh
