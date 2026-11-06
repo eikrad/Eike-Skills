@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: early-end-names-open-branches
+expected_outcome: |
+  Decisions remain that the settled list does not cover (for example a spot that frees up less than 2 hours before the course, or what happens when everyone lets their offer lapse). The reply names the open branches it sees and asks the user whether to grill them now or carry them as open, instead of either starting to build or deciding them itself.

@@ -14,7 +14,7 @@ You asked:
 a) a new waitlist_entries table
 b) a JSON column on courses
 
-➡️ a, because booking a spot locks the course row (SELECT ... FOR UPDATE in courses.py), so a JSON column on that row would make every waitlist join wait on the same lock as bookings. Best case for b: no new table, and no join when showing a course.
+I asked what you'd pick, and you said: my pick is a, because booking a spot locks the course row (SELECT ... FOR UPDATE in courses.py), so a JSON column on that row would make every waitlist join wait on the same lock as bookings. The strongest case against my pick: b needs no new table, and showing a course needs no join.
 
 My answer: nah, b. JSON column.
 

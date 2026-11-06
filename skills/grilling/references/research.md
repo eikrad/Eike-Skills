@@ -1,43 +1,55 @@
 # Research behind the grilling rules
 
-These rules come from the literature review for the P9.17 single-player session (2026-11-06) and from what worked in that session's grill. Each section names the rule in `SKILL.md`, what the source found, and how the rule follows from it.
+These rules come from the literature review for DemBot P9.17, a single-player 1:1 Socratic interview (DemAI-tech/dembot#511), ingested into Eike's second brain under `Sources/Research/` on 2026-11-06, and from the grill session that designed P9.17. The summaries below follow those source notes, including their caveats. Most of these studies concern political opinions or tasks with a correct answer, not plan or design decisions, so applying them to a grill is an inference.
 
-## Vary the probe; ask "why" at most once per branch
+## Ask without leading: no recommendation unless asked
 
-- **Fernbach, Rogers, Fox & Sloman (2013)**, *Psychological Science*: asking people to explain how a policy works moderated their positions, but asking them to list reasons for their position did not.
-- **Crawford & Ruscio (2021)**, *Psychological Science*: three preregistered close replications found no moderation from explanation either.
+- **Jakesch, Bhat, Buschek, Zalmanson & Naaman (2023)**, "Co-Writing with Opinionated Language Models Affects Users' Views", *CHI '23*, doi:10.1145/3544548.3581196. N = 1,506 people wrote with an assistant slanted to one side. Both their writing and their later survey attitudes moved toward the model's side (d = 0.22 and d = 0.19). Most found the suggestions "balanced and reasonable", and only 10% of those whose view the model supported noticed the slant. The authors call this latent persuasion.
+- **El-Sayed et al. (2024)**, "A Mechanism-Based Approach to Mitigating Harms from Persuasive Generative AI", arXiv:2404.15058 (Google DeepMind preprint, not peer-reviewed). Lists anchoring and defaults under "alteration of the choice environment", and sycophancy, flattery and mirroring of the user's views under the trust-and-rapport mechanisms of manipulation.
+- **Enríquez, Pei & Pentland (2026)**, "Position: AI Should Facilitate Democratic Deliberation at Scale", *ICML 2026* (position paper). Its over-reliance safeguards include "multiple options rather than single recommendations that create anchoring effects" and making AI assistance optional, not the default. Its rule: "AI should inform and enable choices, not make them".
 
-So the "explain it" probe moves people less than expected, and the "justify it" probe doesn't move them at all. A repeated "why" mostly has the user rehearse their case. The grill mixes in consequence, perspective and counter-consideration probes, which put something new in front of the user rather than asking them to repeat what they hold.
+P9.17 settled this as "the participant writes first, the AI drafts only on request". The grill does the same with decisions: options and the user's answer first, the agent's pick only on request, marked as its view and paired with the strongest case against it. That is also why the grill acknowledges an answer by recording it rather than praising it.
 
-## Put counter-considerations as questions
+## Facts persuade: give those that cut each way together, with sources
 
-- **Danry, Pataranutaporn, Mao & Maes (2023)**, *CHI*: an AI that framed its explanation as a question ("if X, would Y follow?") improved people's accuracy at judging the logic of arguments more than an AI that stated the explanation outright.
+- **Hackenburg et al. (2025)**, "The levers of political persuasion with conversational artificial intelligence", *Science* 390, eaea3884. N = 76,977, 19 models, 707 issues. Persuasion came mostly from post-training and prompting, not personalisation or scale. The most persuasive prompt was the "information" prompt, and information density explained 44% of the variance in persuasive effect. Where persuasiveness rose, factual accuracy fell. Conversation beat a static message by 41-52%.
+- **Costello, Pennycook & Rand (2024)**, "Durably reducing conspiracy beliefs through dialogues with AI", *Science* 385, eadq1814. A three-round dialogue with counter-evidence tailored to the reasons a person had just given reduced belief by about 20%, and the effect held at two months. 99.2% of the sampled AI claims were rated true. Accurate sourcing did not limit the influence; it was the lever.
+- **Lin et al. (2025)**, "Persuading voters using human-artificial intelligence dialogues", *Nature* 648, 394-401. AI advocacy dialogues moved candidate preference more than typical video ads, using relevant facts and evidence rather than psychological tricks, and not all of those facts were accurate.
+- **Niemeyer, Veri, Dryzek & Bächtiger (2024)**, "How Deliberation Happens: Enabling Deliberative Reason", *APSR* 118(1). Across 19 forums, balanced information and presentations from different sides are named as the guard against one framing dominating.
 
-## Push against the lean; hold positions under pushback
+So a correct source protects against fabrication, not against influence. Symmetry at the moment a fact or argument is raised is the safeguard. Naming the source of every fact keeps it checkable, and saying "I couldn't find X" keeps the agent from raising density by inventing.
 
-- **Sharma et al. (2024)**, *ICLR*, "Towards Understanding Sycophancy in Language Models": RLHF-trained assistants tailor answers to the user's stated views, give up correct answers when challenged, and human preference data rewards this.
+## Vary the probe; "why" at most once per branch
 
-Without a counterweight, the grill drifts toward the user's view. Aiming the probe against the lean, closing a branch on its answered counter-consideration rather than on the user's confidence, and changing position only for a named reason are that counterweight.
+- **Crawford & Ruscio (2021)**, "Asking People to Explain Complex Policies Does Not Increase Political Moderation", *Psychological Science* 32(4), 611-621, doi:10.1177/0956797620972367. Three preregistered replications (N = 1,054) of Fernbach et al. (2013). Explaining a policy mechanistically did lower people's self-rated understanding, but did not moderate their positions. What did replicate is the well-established finding that **providing justifications for prior beliefs strengthens those beliefs**. In Fernbach's original, listing reasons never moderated.
 
-## Recommend only on fact-shaped questions
+So a repeated "why" entrenches the view the user came in with, and the mechanism probe ("walk me through how that works") is worth asking because it reliably shows people what they don't know.
 
-- **Jakesch, Bhat, Buschek, Zalmanson & Naaman (2023)**, *CHI*, "Co-Writing with Opinionated Language Models Affects Users' Views": people who wrote with a model slanted toward one side shifted both their essays and their later survey answers toward that side, mostly without noticing.
+## Perspective and counter-considerations, posed as questions
 
-A recommendation on a value question puts the model's slant into the user's decision. P9.17 resolved this as "the participant writes first, the AI drafts only on request". The grill keeps recommendations where they save time without carrying values (fact-shaped questions) and asks for the user's answer first everywhere else.
+- **Goodin (2000)**, "Democratic Deliberation Within", *Philosophy & Public Affairs* 29(1), 81-109, and **Goodin & Niemeyer (2003)**, "When Does Deliberation Begin?", *Political Studies* 51(4), 627-649. Much of deliberation can happen within a person. In a citizens' jury, attitudes moved more in the information phase than in the discussion phase. The mechanism, imaginative rehearsal, weighing alternatives and role-taking, is known here only from secondary sources (Ralston 2010), and the jury is a single small case.
+- **Cappella, Price & Nir (2002)**, "Argument Repertoire as a Reliable and Valid Measure of Opinion Quality", *Political Communication* 19(1), 73-93. Opinion quality includes both the reasons for one's own view and the reasons others with the opposite view might have.
+- **Danry, Pataranutaporn, Mao & Maes (2023)**, "Don't Just Tell Me, Ask Me", *CHI '23*, doi:10.1145/3544548.3580672. N = 204. AI-framed questioning improved discernment of logically flawed statements more than no feedback, and more than causal explanations from an always-correct AI. The task has a right answer, and agency was not measured.
 
-## Balance when raising an objection
+So the perspective probe ("who would see this differently, and what would they say?") does the work, counter-considerations arrive as questions, and the check-back table records the strongest objection next to the user's answer to it.
 
-When the grill raises an argument against an option, it also names the strongest argument for it. A one-sided objection steers as surely as a one-sided recommendation.
+## Push against the lean; confidence is not a stopping signal
 
-## Check back in the user's own words
+- **Sharma et al. (2024)**, "Towards Understanding Sycophancy in Language Models", *ICLR 2024*, arXiv:2310.13548. Five assistants were consistently sycophantic across four tasks. Human preference data favours responses that match the user's views, sometimes over correct ones. The tasks are general assistant tasks, not dialogue about decisions.
+- **Salvi, Horta Ribeiro, Gallotti & West (2025)**, "On the conversational persuasiveness of GPT-4", *Nature Human Behaviour* 9(8). With basic personal data, GPT-4 was more persuasive than humans 64.4% of the time. Tailoring to what the AI knows about the person raises influence. The setting was adversarial debate.
 
-- **Birt, Scott, Cavers, Campbell & Walter (2016)**, *Qualitative Health Research*, "Member Checking: A Tool to Enhance Trustworthiness or Merely a Nod to Validation?": handing participants a summary to approve yields little. Asking them to engage with a synthesis and add to it yields more.
+In a 1:1 there is no group to push back, so the realistic failure is the agent polishing whatever the user brings. The grill aims against the user's lean, closes a branch on an answered counter-consideration rather than on confidence, and changes its own position only for a named reason. Crawford & Ruscio add that people become less sure after explaining. That is a plausible good outcome, so the grill leaves the doubt with the user.
 
-So the check-back starts with the user's restatement, and the table is built from it.
+## Check back in the user's own words, with authorship visible
 
-## Observed in the P9.17 session
+- **Birt, Scott, Cavers, Campbell & Walter (2016)**, "Member Checking: A Tool to Enhance Trustworthiness or Merely a Nod to Validation?", *Qualitative Health Research* 26(13), 1802-1811. Returning a summary for confirmation is weak validation. Synthesized Member Checking lets participants engage with and add to the interpretation, and what they add is itself data.
+- Jakesch et al. (2023), above: people do not notice the slant of text they accept, so the only reliable trace of AI influence is a visible record of who wrote what.
 
-- One question per turn, with options and a recommendation, kept answers fast. Eike picked against the recommendation at least four times (Q6, Q7, Q9, Q14), so a recommendation doesn't prevent disagreement, but it may still have anchored the answers that agreed with it.
+So the user restates first and the agent structures. The table marks what the agent added and which choices followed its recommendation. If the user would rather not restate, the agent's table is labelled as a draft and the user is asked which row they are least sure of.
+
+## Observed in the P9.17 grill session
+
+- One question per turn kept answers fast. With a recommendation attached, Eike still picked against it at least four times (Q6, Q7, Q9, Q14). But the agreeing answers may have been anchored, and Jakesch suggests nobody would have noticed.
 - Facts looked up mid-grill reshaped later questions: an existing issue turned "how do we build X?" into "is the existing issue the anchor?".
-- Several of the best decisions were Eike's own variants rather than any of the listed options.
+- Several of the best decisions were Eike's own variants, not any of the listed options.
 - A closing summary table, checked before acting, caught misunderstandings.

@@ -17,7 +17,7 @@ Everything here is written for my own daily work, then sharpened through use. No
 | --- | --- | --- |
 | [**feature-workflow**](skills/feature-workflow/SKILL.md) | Drives a feature from idea to committed, tested code through a strict red-green-refactor loop | You want to build a feature, ask what's next on the roadmap, need a feature branch, or say TDD |
 | [**socratic-interviewer**](skills/socratic-interviewer/SKILL.md) | Interviews you about a design decision without ever offering an opinion, then writes up a design brief | You're wrestling with an architecture or UX question and haven't reached an answer yet |
-| [**grilling**](skills/grilling/SKILL.md) | Grills you on a plan one question per turn, pushing against your current lean, until you can state every decision in your own words | You have a plan and want it stress-tested before you build it, or you say "grill me" |
+| [**grilling**](skills/grilling/SKILL.md) | Grills you on a plan one question per turn without leading, pushing against your current lean, until you can state every decision in your own words | You have a plan and want it stress-tested before you build it, or you say "grill me" |
 | [**cv-coverletter-evaluator**](skills/cv-coverletter-evaluator/SKILL.md) | Reviews a CV and cover letter through three independent lenses and returns a prioritized report | You want an application critiqued, scored, or checked for AI tells |
 
 ### feature-workflow
@@ -36,13 +36,14 @@ When your thinking stabilizes, it offers to close and produces a **Design Brief*
 
 ### grilling
 
-Based on [Matt Pocock's `grilling` skill](https://github.com/mattpocock/skills), used under its MIT license (notice in [`skills/grilling/NOTICE.md`](skills/grilling/NOTICE.md)): the plan is held as a design tree, the next question always comes from the frontier of decisions whose prerequisites are settled, and looking up facts is the agent's job while the decisions stay yours. What this version changes comes from a literature review on how questioning changes people's minds, and from what worked in a long design session:
+Based on [Matt Pocock's `grilling` skill](https://github.com/mattpocock/skills), used under its MIT license (notice in [`skills/grilling/NOTICE.md`](skills/grilling/NOTICE.md)). From there it keeps the plan held as a design tree, the next question drawn from the frontier of decisions whose prerequisites are settled, and facts looked up by the agent while the decisions stay yours. What changes comes from the literature review behind a 1:1 Socratic interview feature (persuasion, sycophancy, deliberation research). The aim is a grill that asks hard questions without leading:
 
 - **One question per turn**, not a full round, so the question that matters doesn't get buried.
-- **Varied probes** (clarify, consequence, perspective, counter-consideration) instead of looping on "why", which mostly has you rehearse the view you came in with. Objections arrive as questions ("what would you say to someone who argues …?"), and every objection comes with the strongest argument for the option it attacks.
-- **Pushback against your lean.** Sycophancy is the default failure, so a branch closes when its strongest counter-consideration has been answered, not when you sound sure. The agent changes its own position only for a reason it names.
-- **Recommend or ask first.** On fact-shaped questions it recommends, along with the best case for the runner-up. On value-shaped questions (scope, priorities, who carries a cost) it lists the options without a recommendation and asks for your answer first, because an AI's slant gets adopted without anyone noticing.
-- **A check-back in your own words.** At the end you state the conclusion first. The agent turns it into a decision table and points out what you left out or now state differently. A "yes, that's right" to its summary doesn't count.
+- **No recommendation unless you ask.** Each decision comes as options plus room for your own answer, and you answer first. People adopt an AI's slant without noticing, so when you do ask for its pick, it comes marked as its view, with the strongest case against it.
+- **Facts that cut each way, with sources.** Dense one-sided facts are the strongest persuasion lever there is, even when every one is true, so the agent shows the facts on both sides together and names where each comes from.
+- **Varied probes instead of looping on "why".** Justifying a view hardens it. The grill asks you to walk through the mechanism, the consequences and the views of people who would disagree, and it puts objections to you as questions.
+- **Pushback against your lean.** Sycophancy is the default failure, so a branch closes when you've answered its strongest counter-consideration, not when you sound sure. The agent changes its own position only for a reason it names.
+- **A check-back in your own words.** You state the conclusion first. The agent turns it into a decision table that marks what it added and which choices followed its recommendation, then points out what you left out or now state differently.
 
 The sources behind each rule are in [`references/research.md`](skills/grilling/references/research.md). Test cases live in `skills/grilling/evals/`.
 

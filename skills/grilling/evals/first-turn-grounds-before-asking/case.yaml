@@ -1,6 +1,6 @@
 schema_version: "1.1"
 name: first-turn-grounds-before-asking
 expected_outcome: |
-  Before asking anything, the reply is grounded in the repository: it notices that a waitlist was already started in src/booking/waitlist.py under issue #14 and lets that shape the first question. It puts exactly one question to the user and asks nothing the files already answer.
+  Before asking anything, the reply is grounded in the repository: it notices that a waitlist was already started in src/booking/waitlist.py under issue #14 and lets that shape the first question. It puts exactly one question to the user, asks nothing the files already answer, and leaves its own pick out.
 context:
   scaffold_script: place-files.sh

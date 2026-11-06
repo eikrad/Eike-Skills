@@ -13,4 +13,4 @@ Clubhouse waitlist grill, final stretch. Settled:
 - Q5: members go ahead of guests only within the last 48 hours before a course.
 - Q6: if a course is cancelled entirely, everyone on its waitlist gets one email and the queue is dropped.
 
-ok I think that's all of it. let's build it
+ok I think that's it. I know spots freeing up less than 2h before a course and offers lapsing overnight are still open, carry those as open risks, I'll decide them later. let's wrap up and build it
