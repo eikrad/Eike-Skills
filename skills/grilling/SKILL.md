@@ -74,7 +74,7 @@ Clarify, mechanism and perspective probes can be open questions without options.
 
 ## Ending the grill
 
-The grill ends when the frontier is empty: every branch visited, nothing silently assumed. If the user wants to stop while branches are still open, list them as topics, one line each, and ask the one question: grill them now, or carry them as open?
+The grill ends when the frontier is empty: every branch visited, nothing silently assumed. If the user wants to stop while branches are still open, list them as short noun phrases ("late cancellations", "lapsed offers"), one line each, and ask the one question: grill them now, or carry them as open?
 
 Then check back:
 
