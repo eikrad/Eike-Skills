@@ -36,7 +36,7 @@ When your thinking stabilizes, it offers to close and produces a **Design Brief*
 
 ### grilling
 
-Based on [Matt Pocock's `grilling` skill](https://github.com/mattpocock/skills): the plan is held as a design tree, the next question always comes from the frontier of decisions whose prerequisites are settled, and looking up facts is the agent's job while the decisions stay yours. What this version changes comes from a literature review on how questioning changes people's minds, and from what worked in a long design session:
+Based on [Matt Pocock's `grilling` skill](https://github.com/mattpocock/skills), used under its MIT license (notice in [`skills/grilling/NOTICE.md`](skills/grilling/NOTICE.md)): the plan is held as a design tree, the next question always comes from the frontier of decisions whose prerequisites are settled, and looking up facts is the agent's job while the decisions stay yours. What this version changes comes from a literature review on how questioning changes people's minds, and from what worked in a long design session:
 
 - **One question per turn**, not a full round, so the question that matters doesn't get buried.
 - **Varied probes** (clarify, consequence, perspective, counter-consideration) instead of looping on "why", which mostly has you rehearse the view you came in with. Objections arrive as questions ("what would you say to someone who argues …?"), and every objection comes with the strongest argument for the option it attacks.
