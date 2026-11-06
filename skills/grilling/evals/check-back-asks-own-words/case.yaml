@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: check-back-asks-own-words
+expected_outcome: |
+  Instead of starting to build or presenting its own summary for a yes/no confirmation, the reply asks the user to state the plan in their own words first, so it can then structure that into a table and point out gaps.

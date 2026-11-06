@@ -1,15 +1,15 @@
 # Agent Skills
 
-Self-built, opinionated skills for AI coding agents — a TDD feature workflow, a Socratic design interviewer, and a three-lens CV reviewer.
+Self-built, opinionated skills for AI coding agents — a TDD feature workflow, a Socratic design interviewer, a research-backed grilling interviewer, and a three-lens CV reviewer.
 
 [![Validate Skills](https://github.com/eikrad/Eike-Skills/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/eikrad/Eike-Skills/actions/workflows/validate-skills.yml)
-[![Skills](https://img.shields.io/badge/skills-3-3d8c40)](#the-skills)
+[![Skills](https://img.shields.io/badge/skills-4-3d8c40)](#the-skills)
 [![License](https://img.shields.io/badge/license-Apache_2.0-blue)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/eikrad/Eike-Skills)](https://github.com/eikrad/Eike-Skills/commits)
 
 A **skill** is a folder with a `SKILL.md` inside: YAML frontmatter that tells an agent *when* to reach for it, and Markdown that tells it *how* to do the work. Nothing is compiled, nothing is installed — it is plain text an agent reads at the moment it becomes relevant.
 
-Everything here is written from scratch for my own daily work, then sharpened through use. No forks of the skills that ship with an agent. The format is deliberately vendor-neutral: these were built and tested in Claude Code, but any agent that can load a skill directory can read them as-is.
+Everything here is written for my own daily work, then sharpened through use. No forks of the skills that ship with an agent; where a skill builds on someone else's, its section below says so. The format is deliberately vendor-neutral: these were built and tested in Claude Code, but any agent that can load a skill directory can read them as-is.
 
 ## The skills
 
@@ -17,6 +17,7 @@ Everything here is written from scratch for my own daily work, then sharpened th
 | --- | --- | --- |
 | [**feature-workflow**](skills/feature-workflow/SKILL.md) | Drives a feature from idea to committed, tested code through a strict red-green-refactor loop | You want to build a feature, ask what's next on the roadmap, need a feature branch, or say TDD |
 | [**socratic-interviewer**](skills/socratic-interviewer/SKILL.md) | Interviews you about a design decision without ever offering an opinion, then writes up a design brief | You're wrestling with an architecture or UX question and haven't reached an answer yet |
+| [**grilling**](skills/grilling/SKILL.md) | Grills you on a plan one question per turn, pushing against your current lean, until you can state every decision in your own words | You have a plan and want it stress-tested before you build it, or you say "grill me" |
 | [**cv-coverletter-evaluator**](skills/cv-coverletter-evaluator/SKILL.md) | Reviews a CV and cover letter through three independent lenses and returns a prioritized report | You want an application critiqued, scored, or checked for AI tells |
 
 ### feature-workflow
@@ -32,6 +33,18 @@ Its sharpest rule is about tests: they live at seams and go through public inter
 An interview, not a consultation. One reflection sentence and one question per turn, cycling through six question types — clarification, assumptions, evidence, perspectives, implications, and the question behind the question. The agent holds back opinions completely: no suggesting, no evaluating, not even an encouraging "great point," since praise steers as effectively as advice does.
 
 When your thinking stabilizes, it offers to close and produces a **Design Brief**: the problem, the decision reached, the assumptions it rests on, the tensions left open, and the next steps — grounded strictly in what you actually said.
+
+### grilling
+
+Based on [Matt Pocock's `grilling` skill](https://github.com/mattpocock/skills): the plan is held as a design tree, the next question always comes from the frontier of decisions whose prerequisites are settled, and looking up facts is the agent's job while the decisions stay yours. What this version changes comes from a literature review on how questioning changes people's minds, and from what worked in a long design session:
+
+- **One question per turn**, not a full round, so the question that matters doesn't get buried.
+- **Varied probes** (clarify, consequence, perspective, counter-consideration) instead of looping on "why", which mostly has you rehearse the view you came in with. Objections arrive as questions ("what would you say to someone who argues …?"), and every objection comes with the strongest argument for the option it attacks.
+- **Pushback against your lean.** Sycophancy is the default failure, so a branch closes when its strongest counter-consideration has been answered, not when you sound sure. The agent changes its own position only for a reason it names.
+- **Recommend or ask first.** On fact-shaped questions it recommends, along with the best case for the runner-up. On value-shaped questions (scope, priorities, who carries a cost) it lists the options without a recommendation and asks for your answer first, because an AI's slant gets adopted without anyone noticing.
+- **A check-back in your own words.** At the end you state the conclusion first. The agent turns it into a decision table and points out what you left out or now state differently. A "yes, that's right" to its summary doesn't count.
+
+The sources behind each rule are in [`references/research.md`](skills/grilling/references/research.md). Test cases live in `skills/grilling/evals/`.
 
 ### cv-coverletter-evaluator
 
