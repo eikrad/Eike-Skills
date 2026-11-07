@@ -1,15 +1,15 @@
 # Agent Skills
 
-Self-built, opinionated skills for AI coding agents — a TDD feature workflow, a Socratic design interviewer, and a three-lens CV reviewer.
+Self-built, opinionated skills for AI coding agents — a TDD feature workflow, a Socratic design interviewer, a research-backed grilling interviewer, and a three-lens CV reviewer.
 
 [![Validate Skills](https://github.com/eikrad/Eike-Skills/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/eikrad/Eike-Skills/actions/workflows/validate-skills.yml)
-[![Skills](https://img.shields.io/badge/skills-3-3d8c40)](#the-skills)
+[![Skills](https://img.shields.io/badge/skills-4-3d8c40)](#the-skills)
 [![License](https://img.shields.io/badge/license-Apache_2.0-blue)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/eikrad/Eike-Skills)](https://github.com/eikrad/Eike-Skills/commits)
 
 A **skill** is a folder with a `SKILL.md` inside: YAML frontmatter that tells an agent *when* to reach for it, and Markdown that tells it *how* to do the work. Nothing is compiled, nothing is installed — it is plain text an agent reads at the moment it becomes relevant.
 
-Everything here is written from scratch for my own daily work, then sharpened through use. No forks of the skills that ship with an agent. The format is deliberately vendor-neutral: these were built and tested in Claude Code, but any agent that can load a skill directory can read them as-is.
+Everything here is written for my own daily work, then sharpened through use. No forks of the skills that ship with an agent; where a skill builds on someone else's, its section below says so. The format is deliberately vendor-neutral: these were built and tested in Claude Code, but any agent that can load a skill directory can read them as-is.
 
 ## The skills
 
@@ -17,6 +17,7 @@ Everything here is written from scratch for my own daily work, then sharpened th
 | --- | --- | --- |
 | [**feature-workflow**](skills/feature-workflow/SKILL.md) | Drives a feature from idea to committed, tested code through a strict red-green-refactor loop | You want to build a feature, ask what's next on the roadmap, need a feature branch, or say TDD |
 | [**socratic-interviewer**](skills/socratic-interviewer/SKILL.md) | Interviews you about a design decision without ever offering an opinion, then writes up a design brief | You're wrestling with an architecture or UX question and haven't reached an answer yet |
+| [**grilling**](skills/grilling/SKILL.md) | Stress-tests a plan one question per turn, with grounded facts, technical advice and scrutiny proportional to risk | You want an interview to challenge a plan (software, project or otherwise) before building or committing |
 | [**cv-coverletter-evaluator**](skills/cv-coverletter-evaluator/SKILL.md) | Reviews a CV and cover letter through three independent lenses and returns a prioritized report | You want an application critiqued, scored, or checked for AI tells |
 
 ### feature-workflow
@@ -32,6 +33,18 @@ Its sharpest rule is about tests: they live at seams and go through public inter
 An interview, not a consultation. One reflection sentence and one question per turn, cycling through six question types — clarification, assumptions, evidence, perspectives, implications, and the question behind the question. The agent holds back opinions completely: no suggesting, no evaluating, not even an encouraging "great point," since praise steers as effectively as advice does.
 
 When your thinking stabilizes, it offers to close and produces a **Design Brief**: the problem, the decision reached, the assumptions it rests on, the tensions left open, and the next steps — grounded strictly in what you actually said.
+
+### grilling
+
+Based on [Matt Pocock's `grilling` skill](https://github.com/mattpocock/skills), used under its MIT license (notice in [`skills/grilling/NOTICE.md`](skills/grilling/NOTICE.md)). It keeps the design tree and the split between facts the agent looks up and decisions you own. Its interview rules draw on persuasion, sycophancy and deliberation research, adapted to software, project and other plan decisions rather than validated as a complete workflow.
+
+- **One question per interview turn.** Questions follow dependencies within your scope and any budget you set. A requested summary needs no further question.
+- **Your priorities, with expertise available.** Value choices stay yours. For technical choices, the agent normally hears your direction first, then recommends an approach with its material downside. If you don't know or ask for advice, it helps directly.
+- **Bounded, sourced research.** The agent checks facts that could change the decision and reuses findings. It presents credible trade-offs in proportion to evidence, corrects factual errors directly, and delegates only substantial independent research when tools are available.
+- **Probes proportional to risk.** Real costs and dependencies determine reversibility. Important choices get their strongest counterargument tested; well-supported answers, explicit acceptance of residual risk, or an experiment with a success criterion can close the branch. Confidence alone neither opens nor closes a branch: what counts is the evidence you gave.
+- **A usable finish.** The grill closes when material decisions within scope are settled or explicitly deferred. A clear stop or summary request ends questions immediately. The handoff records choices and risks and, for project work, known acceptance criteria, dependencies and the next verifiable step. At a natural end the agent offers a check-back in your own words, which you can decline; an explicit stop or instruction to implement skips it and needs no separate table approval.
+
+The rationale and its limits are in [`references/research.md`](skills/grilling/references/research.md). Behavioral test cases and evaluation guidance live in [`skills/grilling/evals/`](skills/grilling/evals/README.md); they are separate from the structural validator below. Ordinary coding explanations and bug diagnosis do not require this interview.
 
 ### cv-coverletter-evaluator
 

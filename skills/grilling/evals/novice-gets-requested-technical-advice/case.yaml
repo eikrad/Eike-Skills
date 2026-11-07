@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: novice-gets-requested-technical-advice
+expected_outcome: |
+  A novice explicitly asks for technical guidance instead of naming a preference. The reply explains the relevant options in plain language, recommends a concrete approach with a reason and material limitation, and does not require a technical choice before helping or record its own recommendation as the user's decision.
